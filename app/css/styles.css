@@ -1,6 +1,7 @@
 body {
     background-color: #292828;
     color: white;
+    padding: 10px;
 }
 
 @font-face {
@@ -53,4 +54,10 @@ body {
 
 .detail-director{
   font-size: 1.2rem;
+}
+
+.search-poster{
+  border-radius: 5px;
+  height: 160px;
+  width: 130px;
 }

@@ -1,14 +1,11 @@
 <div class="search">
     <div>
-        <h1>Zen Search</h1>
-        <h5>
-            Go to
-            <a href="#!/gallery">
-            Gallery
-            </a>
-            —— Powered by Zengineer
-        </h5>
-        <div class="topBar">
+      <h5 class="search-title">
+          <a class="search-menu" href="#!/gallery">
+              GALLERY
+          </a>
+      </h5>
+        <div class="">
             <input type="search" class="search" placeholder="Enter the movie title" ng-model="keyword">
         </div>
     </div>
@@ -17,7 +14,7 @@
         <thead>
         <tr>
             <th>Poster</th>
-            <th><a href="" sort-result ng-attr-value="genre">Title</a></th>
+            <th>Title</th>
             <!--<th><a href="" ng-click="movieData.operation.sortMovies('title')">Title</a></th>-->
             <th><a href="" ng-click="movieData.operation.sortMovies('rank')">Rank</a></th>
             <th><a href="" ng-click="movieData.operation.sortMovies('imdbRating')">Score</a></th>
@@ -28,7 +25,7 @@
         <tr style="max-height: 100px" ng-repeat="movie in movieData.filteredMovies|filter:{title:keyword}" data-index="{{$index}}" movie-item>
             <td>
                 <a href="#!/gallery/{{movie.imdbID}}">
-                    <img ng-attr-src="./data/images/{{movie.imdbID}}.jpg">
+                    <img class="search-poster" ng-attr-src="./data/images/{{movie.imdbID}}.jpg">
                 </a>
             </td>
             <td><span ng-bind="movie.title"></span></td>
