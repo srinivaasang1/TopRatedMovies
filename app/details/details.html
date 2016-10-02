@@ -1,0 +1,41 @@
+<script type="text/javascript">
+$(document).ready(function(){
+    $('.materialboxed').materialbox();
+  });
+</script>
+<div class="detail">
+    <div>
+        <h1 class="detail-title" ng-bind="movie.title"></h1>
+
+        <div class="detailInfo detail-text">
+            <div class="row">
+                <div class="col s2">
+                </div>
+                <div class="col s4">
+                    <img class="materialboxed"  src="./data/images/{{movie.imdbID}}.jpg">
+                </div>
+                <div class="col s4">
+                  <h5 class="detail-director">
+                      Director: <span ng-repeat="director in movie.director"><span ng-bind="director"></span><span ng-hide="$last">&#44; </span></span>
+                  </h5>
+                  <h6>
+                      Rating: <span ng-bind="movie.imdbRating"></span>
+                  </h6>
+                  <div>Genre<span ng-show="movie.genre.length > 1">s</span>: <span ng-repeat="genre in movie.genre"><span ng-bind="genre"></span><span ng-hide="$last">&#44; </span></span></div>
+                  <div>Released Date: <span ng-bind="movie.released"></span></div>
+                  <div>Time: <span ng-bind="movie.runtime"></span></div>
+                  <div class="small-6 large-6 columns">
+                      <div>Rank:# <span ng-bind="movie.rank"></span>  &nbsp&nbsp<img class="icons" src="./assets/img/thumbs.png"> <span ng-bind="movie.imdbVotes"></span>&nbsp&nbsp<span class="rating" ng-bind="movie.rated"></span></div>
+                  </div>
+                  <div>Languages: <span ng-repeat="language in movie.language"><span ng-bind="language"></span><span ng-hide="$last">&#44; </span></span></div>
+                  <div>Country: <span ng-repeat="country in movie.country"><span ng-bind="country"></span><span ng-hide="$last">&#44; </span></span></div>
+                  <div>Plot: <span ng-bind="movie.plot"></span></div>
+                  <div><img class="icons" src="./assets/img/actor.png">&nbsp&nbsp<span ng-repeat="actor in movie.actors"><span ng-bind="actor"></span><span ng-hide="$last">&#44; </span></span></div>
+                  <div><img class="icons" src="./assets/img/award.png"> <span ng-bind="movie.awards"></span></div>
+                </div>
+                <div class="col s2">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

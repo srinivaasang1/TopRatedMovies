@@ -1,0 +1,34 @@
+<script type="text/javascript">
+$(document).ready(function() {
+    $('select').material_select();
+  });
+
+</script>
+<h5 class="search-title">
+    <a class="search-menu" href="#!/search">
+        SEARCH
+    </a>
+</h5>
+
+<div class="input-field col s12">
+  <select novalidate="" ng-model="genre" ng-options="genre for genre in movieData.genres">                                                </select>
+</div>
+<br /><br />
+
+<div class="row description-cent detail-text" ng-repeat="movies in movieData.filteredMovies" >
+    <div class="col s3" data-index="{{$index}}" ng-repeat="movie in movies|filter:{'genre':genre}">
+        <div>
+            <a href="#!/gallery/{{movie.imdbID}}">
+                <img  class="poster" ng-attr-src="./data/images/{{movie.imdbID}}.jpg">
+            </a>
+        </div>
+        <div class="description">
+            <div class="movieName">
+                <span ng-bind="movie.title"></span>
+            </div>
+            <div class="movieRate">
+                Rating: <span ng-bind="movie.imdbRating"></span>
+            </div>
+        </div>
+    </div>
+</div>

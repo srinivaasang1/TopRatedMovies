@@ -1,0 +1,56 @@
+body {
+    background-color: #292828;
+    color: white;
+}
+
+@font-face {
+    font-family: 'grotesk'; /*a name to be used later*/
+    src: url('../assets/fonts/HKGrotesk-Light.otf'); /*URL to font*/
+}
+
+.poster{
+  height:320px;
+  width:240px;
+  border-radius: 5px;
+}
+
+.search-menu{
+  color: white;
+  letter-spacing: 0.1em;
+}
+
+.search-title{
+  text-align: center;
+}
+
+.description-cent{
+  text-align: center;
+}
+
+.detail-title{
+  font-size: 28px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: capitalize;
+}
+
+.rating{
+  background-color: white;
+  color: #757575;
+  padding: 3px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.icons{
+  height: 26px;
+  width: 26px;
+}
+
+.detail-text{
+  font-family: 'grotesk';
+}
+
+.detail-director{
+  font-size: 1.2rem;
+}
